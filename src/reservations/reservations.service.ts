@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException, NotImplementedException } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException, NotImplementedException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { RoomEntity } from '../rooms/entities/room.entity';
@@ -14,10 +14,13 @@ export class ReservationsService {
     @InjectRepository(RoomEntity)
     private readonly roomsRepository: Repository<RoomEntity>,
     // TODO 2: Inject ReservationRulesService through this constructor.
+    private readonly reservationRulesService : ReservationRulesService
   ) {}
 
   async cancel(id: number): Promise<ReservationEntity> {
     // TODO 2: Coordinate the operation according to the examination.
+    
+    throw ConflictException
     throw new NotImplementedException('TODO 2: implement cancellation');
   }
 
