@@ -9,7 +9,8 @@ Registrar resultados reales después de implementar y probar los endpoints. Sust
 | Crear con una propiedad adicional, como status. | 400 | Pendiente | |
 | Crear con una sala inexistente. | 404 | Pendiente | |
 | Cancelar una reserva activa y consultar el cambio guardado. | 200 | Pendiente | |
-| Cancelar de nuevo la misma reserva. | 409 | Pendiente | |
+| Cancelar de nuevo la misma reserva. | 409 | 409 | "Reservation is already cancelled"|
+
 | Intentar cancelar con ID abc. | 400 | Pendiente | |
 | Intentar cancelar con un ID entero inexistente. | 404 | Pendiente | |
 
@@ -19,8 +20,10 @@ Registrar el resultado de `npm test`.
 
 | Caso | Resultado obtenido |
 | --- | --- |
-| 1. La regla real rechaza una reserva cancelada. | Pendiente |
-| 2. El servicio cancela y guarda una reserva activa. | Pendiente |
-| 3. Si la regla simulada rechaza, conserva active y no guarda. | Pendiente |
+| 1. La regla real rechaza una reserva cancelada. | Pass |
+| 2. El servicio cancela y guarda una reserva activa. | Failed |
+| 3. Si la regla simulada rechaza, conserva active y no guarda. | Failed |
 
-Resumen de ejecución: pendiente.
+No alcance a implementar el segundo archivo completo
+
+Resumen de ejecución: parcial.
