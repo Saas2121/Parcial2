@@ -8,7 +8,6 @@ export class ReservationRulesService {
     if (reservation.status === 'cancelled') {
       throw new ConflictException('Reservation is already cancelled');
     }
-    throw new NotImplementedException('TODO 2: implement the cancellation rule');
   }
 }
 
